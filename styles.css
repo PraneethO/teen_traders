@@ -21,11 +21,11 @@ body {
 /* ! NavBar Code */
 nav {
   z-index: 5;
+  display: block;
   position: fixed;
   width: 100%;
 }
 .container {
-  max-width: 1050px;
   margin: auto;
 }
 
@@ -144,7 +144,7 @@ nav {
   font-size: 1.3rem;
   color: #ffffff;
 
-  right: 75vw;
+  left: 3vw;
   top: 2vh;
 }
 
@@ -153,7 +153,7 @@ nav {
 }
 
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
-  transform: translateX(0);
+  transform: translateX(100%);
 }
 
 .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
@@ -178,7 +178,7 @@ nav {
   width: 100vw;
 
   background: linear-gradient(-70deg, #000000, #ffffff);
-  background-size: 300% 300%;
+  background-size: 200% 200%;
   animation: gradient 14s linear infinite;
   backdrop-filter: blur(10px);
 
@@ -188,7 +188,30 @@ nav {
   justify-content: center;
 }
 .firstContainer img {
-  height: 500px;
+  height: 501px;
+}
+
+.firstContainerRight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 501px;
+  width: 35vw;
+}
+.firstContainerRight a {
+  text-decoration: none;
+
+  height: 90px;
+  font-size: 2rem;
+  cursor: pointer;
+
+  background-color: black;
+  width: 30vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes gradient {
@@ -205,7 +228,7 @@ nav {
 
 @keyframes backgroundBlur {
   0% {
-    opacity: 0;
+    opacity: 0.3;
     filter: blur(10px);
   }
   100% {
