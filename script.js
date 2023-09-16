@@ -4,6 +4,8 @@ const lineOne = document.getElementById("line1");
 const lineTwo = document.getElementById("line2");
 const lineThree = document.getElementById("line3");
 
+const bigContainer = document.getElementById("bigContainer");
+
 var count = 0;
 
 function handleClick() {
