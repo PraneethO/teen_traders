@@ -8,45 +8,130 @@
       content="The first teenage stock market competition orientated towards high schoolers."
     />
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./script.js"></script>
+    <script rel="script.js"></script>
   </head>
   <body>
-    <nav id="navbar">
-      <div class="navbar">
-        <div class="container nav-container">
-          <div class="logo"><img src="./assets/logo.png" alt="Logo" /></div>
-
-          <input class="checkbox" type="checkbox" name="" id="" />
-          <div class="hamburger-lines">
-            <span class="line line1"></span>
-            <span class="line line2"></span>
-            <span class="line line3"></span>
-          </div>
-          <div class="menu-items">
-            <li><a> About </a></li>
-            <li><a> Founders </a></li>
-            <li><a>Stock Game</a></li>
-            <li><a> Classes </a></li>
-            <li><a> Join Us </a></li>
-            <li><a> Contact </a></li>
-          </div>
+    <div class="big-container">
+      <div class="nav-container">
+        <div
+          class="hamburger-lines"
+          id="hamburger-lines"
+          onclick="handleClick()"
+        >
+          <span class="line line1" id="line1"></span>
+          <span class="line line2" id="line2"></span>
+          <span class="line line3" id="line3"></span>
         </div>
       </div>
-    </nav>
 
-    <div class="firstContainer">
-      <img src="./assets/logo.png" alt="logo" />
-      <div class="firstContainerRight">
-        <a style="transform: translateX(-5vw); z-index: 10; cursor: pointer"
-          >About Us</a
-        >
-        <a style="z-index: 10; cursor: pointer">Stock Game</a>
-        <a style="transform: translateX(-5vw); z-index: 10">Classes</a>
+      <div class="menu-items" id="menu-items">
+        <li><a href="#aboutUs"> About </a></li>
+        <li><a href="#founders"> Founders </a></li>
+        <li><a href="#stockGame">Stock Game</a></li>
+        <li><a href="#classes"> Classes </a></li>
+        <li><a href="contactUs"> Contact Us</a></li>
       </div>
     </div>
 
-    <div class="bodyContainer"><h1>About Us</h1></div>
-    <div class="bodyContainer"><h1>Founders</h1></div>
-    <div class="bodyContainer"><h1>Stock Market Game</h1></div>
+    <div class="firstContainer">
+      <div class="firstContainerMain">
+        <div class="firstContainerFarRight">
+          Stocks can be terrifying <br />That's where we come in<br />
+          - Official NonProfit <br />
+          - Local Chapters <br />
+          - Pittsburgh Based<br />
+          - Free Classes <br />
+          - Profit Minded Stock Game <br />
+          Become Inspired. Join Now
+        </div>
+        <img src="./assets/logo.png" alt="logo" />
+        <div class="firstContainerRight">
+          <div class="link-wrapper" style="transform: translateX(-5vw)">
+            <a>About Us</a>
+          </div>
+          <div class="link-wrapper">
+            <a>Stock Game</a>
+          </div>
+          <div class="link-wrapper" style="transform: translateX(-5vw)">
+            <a>Classes</a>
+          </div>
+        </div>
+      </div>
+      <h1>TEACHING THE ART OF TRADING</h1>
+    </div>
+
+    <div class="bodyContainer about">
+      <hr />
+      <hr style="width: 60%" />
+      <h1 id="aboutUs">About Us</h1>
+
+      <div class="splitter">
+        <img src="./assets/pittsburgh.jpg" alt="Pittsburgh Image" />
+        <div style="padding-left: 2vw">
+          <span style="font-size: 2vw; color: #f18787"
+            >Pittsburgh Ranks Second in Millenial Debt</span
+          ><br />
+          <span style="font-size: 1.5vw"
+            >In an era where the average millenial has
+            <span style="color: #f22424">$48,611</span> of debt, this is
+            huge.</span
+          >
+          <br />
+          <div style="padding-top: 2vh"></div>
+          As we looked out towards our community, we cound a lack of personal
+          finance and basic money management skills. Most people don't know what
+          a 401(k) is, or how to setup a Roth IRA.
+          <div style="padding-top: 2vh"></div>
+          Furthermore, we're continuing the cycle. Only around a quarter of
+          millenials put away their money
+          <strong>before they turned 20.</strong> The younger population of
+          Pittsburgh isn't using their money to make money through tools such as
+          investing or missing out on free benefits. That's where we come in.
+          <div style="padding-top: 2vh"></div>
+          <span style="font-size: 1.7rem"
+            >Our mission is to help inspire
+            <span style="color: green">better money management</span> to
+            <span style="color: green">secure the future</span>.</span
+          >
+        </div>
+      </div>
+
+      We do this in two ways:
+      <div class="splitter">
+        <div class="aboutSplitterText">
+          <span style="font-size: 2vw">The Stock Market Game</span>
+          <div style="padding-top: 2vh"></div>
+          *insert info here*
+        </div>
+
+        <div class="aboutSplitterText">
+          <span style="font-size: 2vw">Free Business Classes</span>
+          <div style="padding-top: 2vh"></div>
+          *insert info here*
+        </div>
+      </div>
+
+      <hr style="width: 60%" />
+    </div>
+    <div class="bodyContainer">
+      <h1 id="founders">Founders</h1>
+
+      <hr style="width: 60%" />
+    </div>
+    <div class="bodyContainer">
+      <h1 id="stockGame">Stock Market Game</h1>
+      <hr style="width: 60%" />
+    </div>
+    <div class="bodyContainer">
+      <h1 id="classes">Classes</h1>
+      <hr style="width: 60%" />
+    </div>
+    <div class="bodyContainer">
+      <h1 id="contactUs">Contact Us</h1>
+      <hr style="width: 60%" />
+      <hr />
+    </div>
+    <footer>© Teen Traders 2023</footer>
+    <script src="./script.js"></script>
   </body>
 </html>

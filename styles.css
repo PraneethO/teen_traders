@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Condensed&family=Tilt+Prism&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Lato&family=Roboto+Condensed&family=Tilt+Prism&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  z-index: 1;
 
   font-family: "Lato", sans-serif;
 
@@ -16,82 +15,64 @@
 
 body {
   background-color: #000000;
+  backdrop-filter: blur(20px);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* ! NavBar Code */
-nav {
-  z-index: 5;
-  display: block;
+.big-container {
+  display: flex;
+  justify-content: right;
+  flex-direction: column;
+
   position: fixed;
-  width: 100%;
-}
-.container {
-  margin: auto;
+  right: 2vw;
+  top: 2vh;
+
+  z-index: 2;
 }
 
 .nav-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 10%;
+  justify-content: right;
 }
 
-.navbar .menu-items {
+.menu-items {
+  width: 15vw;
+  height: 30vh;
   display: flex;
+  display: "none";
+  flex-direction: column;
+  text-align: center;
+
+  background-color: #000000;
+  backdrop-filter: blur(10px);
 }
 
-.navbar .nav-container li {
+.menu-items li {
   list-style: none;
+  line-height: 5.5vh;
 }
 
-.navbar .nav-container a {
+.menu-items a {
   text-decoration: none;
   color: #ffffff;
-  font-weight: 500;
-  font-size: 1.2rem;
-  padding: 0.7rem;
-}
-
-.navbar .nav-container a:hover {
-  font-weight: bolder;
-}
-
-.nav-container {
-  display: block;
-  position: relative;
-  height: 10%;
-}
-
-.nav-container .checkbox {
-  transform: translateY(3vh);
-  position: absolute;
-  display: block;
-  height: 1.5rem;
-  width: 2rem;
-  top: 4vh;
-  right: 1vw;
-  z-index: 5;
-  opacity: 0;
-  cursor: pointer;
+  font-size: 2.5vh;
 }
 
 .nav-container .hamburger-lines {
-  transform: translateY(3vh);
-  display: block;
   height: 1.5rem;
-  right: 1vw;
   width: 2rem;
-  position: absolute;
-  top: 4vh;
 
-  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .nav-container .hamburger-lines .line {
-  display: block;
   height: 0.2rem;
   width: 100%;
   border-radius: 1rem;
@@ -112,64 +93,19 @@ nav {
   transition: transform 0.4s ease-in-out;
 }
 
-.navbar .menu-items {
-  padding-top: 9vh;
-  width: 15vw;
-  transform: translate(300%);
-  display: flex;
-  flex-direction: column;
-  margin-left: 70vw;
-  transition: transform 0.5s ease-in-out;
-  text-align: center;
-}
-
-.navbar .menu-items li {
+.menu-items li {
   white-space: nowrap;
   font-size: 1.5rem;
   font-weight: 500;
-  padding-top: 4vh;
 }
 
-.navbar .menu-items li a {
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 0.7rem;
+.menu-items li a {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0.2rem;
   cursor: pointer;
 }
-.navbar .menu-items li a:hover {
+.menu-items li a:hover {
   background-color: rgba(0, 0, 0, 0.7);
-}
-
-.logo {
-  position: absolute;
-  font-size: 1.3rem;
-  color: #ffffff;
-
-  left: 3vw;
-  top: 2vh;
-}
-
-.logo img {
-  height: 100px;
-}
-
-.nav-container input[type="checkbox"]:checked ~ .menu-items {
-  transform: translateX(100%);
-}
-
-.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
-  transform: rotate(45deg);
-}
-
-.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
-  transform: scaleY(0);
-}
-
-.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
-  transform: rotate(-45deg);
-}
-
-.nav-container input[type="checkbox"]:checked ~ .logo {
-  display: none;
 }
 
 /* ! First Body CSS */
@@ -178,10 +114,18 @@ nav {
   width: 100vw;
 
   background: linear-gradient(-70deg, #000000, #ffffff);
-  background-size: 200% 200%;
-  animation: gradient 14s linear infinite;
+  background-size: 400% 400%;
+  animation: gradient 12s linear infinite;
   backdrop-filter: blur(10px);
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.firstContainerMain {
+  padding-left: 1vw;
+  padding-top: 8vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -189,6 +133,13 @@ nav {
 }
 .firstContainer img {
   height: 501px;
+  transition: height 0.1s ease 100ms;
+  cursor: pointer;
+
+  transform: translateX(10%);
+}
+.firstContainer img:hover {
+  height: 505px;
 }
 
 .firstContainerRight {
@@ -205,13 +156,109 @@ nav {
   height: 90px;
   font-size: 2rem;
   cursor: pointer;
-
-  background-color: black;
-  width: 30vw;
+  width: 20vw;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  z-index: 2 !important;
+
+  transition: width 0.2s ease 100ms;
+}
+.firstContainerRight a:hover {
+  border: white solid 2px;
+  width: 21vw;
+}
+
+.link-wrapper {
+  background-color: black;
+  transition: opacity 0.2s ease 100ms;
+  transition: width 0.2s ease 100ms;
+
+  white-space: nowrap;
+}
+
+.link-wrapper:hover {
+  background-image: url("./assets/stock.jpg");
+  background-color: transparent;
+  background-size: 80%;
+
+  opacity: 0.7;
+}
+
+.firstContainer h1 {
+  padding-top: 1vh;
+  font-family: "Cabin", sans-serif;
+  font-size: 5vw;
+  white-space: nowrap;
+  margin: 0;
+  padding-left: 5vw;
+  letter-spacing: 5px;
+}
+
+.firstContainerFarRight {
+  width: 25vw;
+  transform: translateX(8%);
+  font-size: 1.5rem;
+
+  height: 501px;
+  line-height: 60px;
+  white-space: nowrap;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 3vw;
+}
+
+/* ! Styling of body paragraphs */
+.bodyContainer {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  background-color: #333333;
+}
+.bodyContainer hr {
+  margin-top: 3vh;
+  width: 80%;
+}
+.bodyContainer h1 {
+  background: linear-gradient(-70deg, #000000, #ffffff);
+  background-size: 400% 400%;
+  animation: gradient 12s linear infinite;
+  backdrop-filter: blur(10px);
+
+  margin-top: 1vh;
+  padding: 1vh 0 1vh 0;
+  width: 30vw;
+  text-align: center;
+}
+
+.splitter {
+  width: 90%;
+  padding: 3vh 0 3vh 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* ! About Us Styling */
+.splitter img {
+  width: 40vw;
+}
+
+.aboutSplitterText {
+  width: 40vw;
+
+  background: linear-gradient(-70deg, #222222, #444444);
+  background-size: 400% 400%;
+  animation: gradient 12s linear infinite;
+  backdrop-filter: blur(100px);
 }
 
 @keyframes gradient {
@@ -234,5 +281,14 @@ nav {
   100% {
     opacity: 1;
     filter: blur(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

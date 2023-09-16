@@ -1,12 +1,23 @@
-window.addEventListener("scroll", function () {
-  var navbar = document.getElementById("navbar");
-  if (window.scrollY < window.innerHeight) {
-    navbar.style.display = "none"; // Show the navbar when scrolled down 100 pixels
-  } else {
-    navbar.style.display = "block"; // Hide the navbar when at the top of the page
-  }
+const menuItems = document.getElementById("menu-items");
+const hamburgerLines = document.getElementById("hamburger-lines");
+const lineOne = document.getElementById("line1");
+const lineTwo = document.getElementById("line2");
+const lineThree = document.getElementById("line3");
 
-  if (window.scrollY == 0) {
-    navbar.style.display = "block";
+var count = 0;
+
+function handleClick() {
+  count += 1;
+
+  if (count % 2 == 1) {
+    menuItems.style.display = "none";
+    lineOne.style.transform = "rotate(0deg)";
+    lineTwo.style.transform = "scaleY(1)";
+    lineThree.style.transform = "rotate(0deg)";
+  } else {
+    menuItems.style.display = "block";
+    lineOne.style.transform = "rotate(45deg)";
+    lineTwo.style.transform = "scaleY(0)";
+    lineThree.style.transform = "rotate(-45deg)";
   }
-});
+}
