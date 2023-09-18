@@ -9,8 +9,7 @@
   font-family: "Lato", sans-serif;
 
   color: white;
-
-  animation: backgroundBlur 1.5s ease;
+  animation: backgroundBlur 0.4s ease;
 }
 
 body {
@@ -40,26 +39,31 @@ html {
 }
 
 .menu-items {
-  width: 15vw;
+  width: 13vw;
   height: 30vh;
   display: flex;
-  display: "none";
+  display: none;
   flex-direction: column;
   text-align: center;
 
-  background-color: #000000;
   backdrop-filter: blur(10px);
+
+  background: transparent;
 }
 
 .menu-items li {
   list-style: none;
   line-height: 5.5vh;
+
+  background-color: black;
 }
 
-.menu-items a {
+.menu-items li a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 2.5vh;
+  font-size: 1.3vw;
+
+  background: transparent;
 }
 
 .nav-container .hamburger-lines {
@@ -69,6 +73,8 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  cursor: pointer;
 }
 
 .nav-container .hamburger-lines .line {
@@ -94,7 +100,7 @@ html {
 
 .menu-items li {
   white-space: nowrap;
-  font-size: 1.5rem;
+  font-size: 1.5vw;
   font-weight: 500;
 }
 
@@ -131,14 +137,22 @@ html {
   justify-content: center;
 }
 .firstContainer img {
-  height: 501px;
+  height: 30vw;
   transition: height 0.1s ease 100ms;
   cursor: pointer;
 
+  border-radius: 15vw;
+
   transform: translateX(10%);
+
+  background-color: #000000;
 }
 .firstContainer img:hover {
-  height: 505px;
+  height: 31vw;
+
+  background-image: url("./assets/stock2.jpg");
+  background-color: transparent;
+  background-size: 80%;
 }
 
 .firstContainerRight {
@@ -153,7 +167,7 @@ html {
   text-decoration: none;
 
   height: 90px;
-  font-size: 2rem;
+  font-size: 2vw;
   cursor: pointer;
   width: 20vw;
 
@@ -191,18 +205,32 @@ html {
   font-family: "Cabin", sans-serif;
   font-size: 5vw;
   white-space: nowrap;
-  margin: 0;
-  padding-left: 5vw;
   letter-spacing: 5px;
+
+  background-color: white;
+
+  background-image: linear-gradient(90deg, green, red);
+
+  animation: gradient linear 5s;
+
+  background-size: 200%;
+  background-repeat: repeat;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+
+  background-clip: text;
 }
 
 .firstContainerFarRight {
   width: 25vw;
   transform: translateX(8%);
-  font-size: 1.5rem;
+  font-size: 2vw;
 
   height: 501px;
-  line-height: 60px;
+  line-height: 4vw;
   white-space: nowrap;
 
   display: flex;
