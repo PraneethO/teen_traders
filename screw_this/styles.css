@@ -1,5 +1,8 @@
+/* Raleway */
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
+/* Pinyon */
+@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -11,10 +14,12 @@ body {
   height: 100vh;
   width: 100vw;
 
-  background-color: black;
-
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
+
+  background: linear-gradient(45deg, #000000, #444444);
+  background-size: 200% 200%;
+  animation: 6s gradientShift linear infinite;
 }
 
 .nav {
@@ -109,13 +114,20 @@ body {
 }
 
 /* ! Main Body Container Code */
+.fadeInClass {
+  animation: 1s fadeInBottom ease;
+}
+hr {
+  width: 80%;
+}
+
 .firstContainer {
-  height: 95%;
+  height: 97%;
   width: 100%;
 
-  background: linear-gradient(45deg, #000000, #444444);
+  /* background: linear-gradient(45deg, #000000, #444444);
   background-size: 200% 200%;
-  animation: 6s gradientShift linear infinite;
+  animation: 6s gradientShift linear infinite; */
 
   color: white;
 }
@@ -130,8 +142,6 @@ body {
 .twoWay h1 {
   font-size: 4vw;
   padding-left: 3%;
-
-  animation: 1s fadeInBottom ease;
 }
 .twoWay h1 span {
   background: linear-gradient(to right, green, red);
@@ -146,15 +156,11 @@ body {
 .twoWay p {
   font-size: 2vw;
   padding-left: 3%;
-
-  animation: 1s fadeInBottom ease;
 }
 
 .twoWay img {
   width: 50%;
   height: 50vw;
-
-  animation: 1s fadeInBottom ease;
 }
 
 @media (max-width: 650px) {
@@ -172,6 +178,24 @@ body {
   }
 }
 
+.quote {
+  color: white;
+
+  width: 100%;
+  text-align: center;
+
+  font-size: 2vw;
+
+  padding: 1%;
+
+  /* background: linear-gradient(45deg, #000000, #444444);
+  background-size: 200% 200%;
+  animation: 6s gradientShift linear infinite; */
+}
+.quote span {
+  font-family: "Pinyon Script", cursive;
+}
+
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
@@ -187,9 +211,22 @@ body {
 @keyframes fadeInBottom {
   from {
     opacity: 0;
-    transform: translateY(25%);
+    transform: translateY(5vh);
   }
   to {
     opacity: 1;
   }
+}
+
+footer {
+  color: #777777;
+  width: 100%;
+  padding-left: 3vw;
+  font-size: 1.2rem;
+
+  /* background: linear-gradient(45deg, #000000, #444444);
+  background-size: 200% 200%;
+  animation: 6s gradientShift linear infinite; */
+
+  padding: 1%;
 }
