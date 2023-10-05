@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: "Raleway", sans-serif;
+
+  height: 100vh;
+  width: 100vw;
+
+  background-color: black;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+
+  color: white;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+/* ! Main Body Container Code */
+.firstContainer {
+  height: 95%;
+  width: 100%;
+
+  background: linear-gradient(45deg, #000000, #444444);
+  background-size: 200% 200%;
+  animation: 6s gradientShift linear infinite;
+
+  color: white;
+}
+.twoWay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: left;
+}
+
+.twoWay h1 {
+  font-size: 4vw;
+  padding-left: 3%;
+
+  animation: 1s fadeInBottom ease;
+}
+.twoWay h1 span {
+  background: linear-gradient(to right, green, red);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 5s ease infinite; /* Adjust the duration as needed */
+  white-space: nowrap;
+  background-size: 150% 150%;
+}
+
+.twoWay p {
+  font-size: 2vw;
+  padding-left: 3%;
+
+  animation: 1s fadeInBottom ease;
+}
+
+.twoWay img {
+  width: 50%;
+  height: 50vw;
+
+  animation: 1s fadeInBottom ease;
+}
+
+@media (max-width: 650px) {
+  .twoWay {
+    flex-direction: column; /* Stack divs vertically */
+    text-align: center; /* Center the content */
+
+    padding-top: 15vh;
+  }
+
+  .twoWay .leftMessage,
+  .twoWay img {
+    width: 100%; /* Make both divs take up full width when stacked */
+    height: 100vw;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(25%);
+  }
+  to {
+    opacity: 1;
+  }
+}
