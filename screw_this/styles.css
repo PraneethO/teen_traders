@@ -5,6 +5,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
 * {
   box-sizing: border-box;
+  overflow-anchor: none;
+
+  scroll-padding: 7vh;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -17,9 +24,15 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
 
-  background: linear-gradient(45deg, #000000, #444444);
-  background-size: 200% 200%;
-  animation: 6s gradientShift linear infinite;
+  background: linear-gradient(45deg, #080808, #333333);
+  background-size: 500% 500%;
+  animation: 15s gradientShift linear infinite;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: black;
 }
 
 .nav {
@@ -28,6 +41,8 @@ body {
   position: fixed;
 
   color: white;
+
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .nav > .nav-header {
@@ -118,11 +133,11 @@ body {
   animation: 1s fadeInBottom ease;
 }
 hr {
-  width: 80%;
+  width: 90%;
 }
 
 .firstContainer {
-  height: 97%;
+  height: 97% !important;
   width: 100%;
 
   /* background: linear-gradient(45deg, #000000, #444444);
@@ -133,17 +148,17 @@ hr {
 }
 .twoWay {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
   text-align: left;
 }
 
-.twoWay h1 {
+.firstContainer h1 {
   font-size: 4vw;
   padding-left: 3%;
 }
-.twoWay h1 span {
+.firstContainer h1 span {
   background: linear-gradient(to right, green, red);
   -webkit-background-clip: text;
   background-clip: text;
@@ -153,47 +168,104 @@ hr {
   background-size: 150% 150%;
 }
 
-.twoWay p {
+.firstContainer p {
   font-size: 2vw;
   padding-left: 3%;
 }
 
-.twoWay img {
+.firstContainer img {
   width: 50%;
   height: 50vw;
 }
 
 @media (max-width: 650px) {
-  .twoWay {
-    flex-direction: column; /* Stack divs vertically */
-    text-align: center; /* Center the content */
-
-    padding-top: 15vh;
+  .firstContainer {
+    padding-top: 10vh;
   }
 
-  .twoWay .leftMessage,
-  .twoWay img {
+  .firstContainer .leftMessage,
+  .firstContainer img {
     width: 100%; /* Make both divs take up full width when stacked */
-    height: 100vw;
   }
 }
 
-.quote {
+/* Slider Code */
+.slider {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.slide-track {
+  width: 200vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  animation: scroll 40s linear infinite; /* Adjust the duration as needed */
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: auto;
+}
+.slide img {
+  height: 20vh;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-100%); /* Adjust slide width as needed */
+  }
+}
+
+.container {
+  display: flex;
+  width: 100%;
+
+  flex-direction: column;
   color: white;
 
-  width: 100%;
-  text-align: center;
-
-  font-size: 2vw;
+  border-radius: 1rem;
 
   padding: 1%;
-
-  /* background: linear-gradient(45deg, #000000, #444444);
-  background-size: 200% 200%;
-  animation: 6s gradientShift linear infinite; */
 }
-.quote span {
-  font-family: "Pinyon Script", cursive;
+
+#about {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("./assets/pittsburgh.png");
+
+  background-size: cover;
+
+  width: 100%;
+  border-radius: 0;
+
+  font-size: 1rem;
+  white-space: normal;
+  /* font-size: 1.3vw; */
+}
+
+.container h1 {
+  font-size: 4vw;
+}
+
+#strategy .twoWay {
+  justify-content: space-around;
+
+  width: 100%;
+}
+.smallBox h2 {
+  font-size: 2rem;
+  text-align: left;
+}
+.smallBox {
+  width: 40%;
+  margin: 0;
+  padding: 0;
 }
 
 @keyframes gradientShift {
@@ -211,10 +283,17 @@ hr {
 @keyframes fadeInBottom {
   from {
     opacity: 0;
-    transform: translateY(5vh);
+    transform: translateY(10%);
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 650px) {
+  .twoWay {
+    flex-direction: column; /* Stack divs vertically */
+    text-align: center; /* Center the content */
   }
 }
 
