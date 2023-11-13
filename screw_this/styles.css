@@ -5,9 +5,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
 * {
   box-sizing: border-box;
-  overflow-anchor: none;
 
   scroll-padding: 7vh;
+
+  overflow-anchor: none;
+
+  line-height: 25px;
 }
 
 html {
@@ -21,13 +24,12 @@ body {
   height: 100vh;
   width: 100vw;
 
-  overflow-y: auto;
+  overflow-y: scroll;
   overflow-x: hidden;
 
-  background: linear-gradient(45deg, #080808, #333333);
-  background-size: 500% 500%;
-  animation: 15s gradientShift linear infinite;
-
+  background: linear-gradient(45deg, #000000, #333333);
+  background-size: 200% 800%;
+  animation: 10s gradientShift linear infinite;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,6 +56,8 @@ body {
   font-size: 22px;
   color: #fff;
   padding: 10px 10px 10px 10px;
+
+  text-decoration: none;
 }
 
 .nav > .nav-btn {
@@ -130,14 +134,22 @@ body {
 
 /* ! Main Body Container Code */
 .fadeInClass {
-  animation: 1s fadeInBottom ease;
+  display: none;
+}
+
+.fadeInClassAnimationTitle {
+  animation: 1s fadeInBottomLess ease;
+}
+
+.fadeInClassAnimation {
+  animation: 2s fadeInBottom ease;
+  display: inline-block;
 }
 hr {
   width: 90%;
 }
 
 .firstContainer {
-  height: 97% !important;
   width: 100%;
 
   /* background: linear-gradient(45deg, #000000, #444444);
@@ -155,8 +167,10 @@ hr {
 }
 
 .firstContainer h1 {
-  font-size: 4vw;
+  font-size: 3vw;
   padding-left: 3%;
+
+  line-height: 70px;
 }
 .firstContainer h1 span {
   background: linear-gradient(to right, green, red);
@@ -171,6 +185,8 @@ hr {
 .firstContainer p {
   font-size: 2vw;
   padding-left: 3%;
+
+  line-height: 50px;
 }
 
 .firstContainer img {
@@ -178,9 +194,10 @@ hr {
   height: 50vw;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 900px) {
   .firstContainer {
     padding-top: 10vh;
+    height: 130vh;
   }
 
   .firstContainer .leftMessage,
@@ -195,7 +212,7 @@ hr {
   width: 100%;
   white-space: nowrap;
 
-  background-color: #222222;
+  background-color: #555555;
 }
 
 .slide-track {
@@ -229,6 +246,7 @@ hr {
 .container {
   display: flex;
   width: 100%;
+  height: auto;
 
   flex-direction: column;
   color: white;
@@ -249,11 +267,14 @@ hr {
 
   font-size: 1rem;
   white-space: normal;
+
   /* font-size: 1.3vw; */
 }
 
 .container h1 {
-  font-size: 4vw;
+  font-size: 2rem;
+
+  background: transparent;
 }
 
 #strategy .twoWay {
@@ -269,9 +290,18 @@ hr {
   width: 40%;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
-@media (max-width: 650px) {
+#strategy h1 {
+  font-size: 2.5rem;
+}
+
+.insideInfo h1 {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 900px) {
   .smallBox {
     width: 100%;
   }
@@ -283,20 +313,61 @@ hr {
   color: white;
 }
 
-#involved {
-  width: 50%;
+#team {
+  width: 100%;
+  height: 100%;
+
+  color: white;
+
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url("./assets/wall_street.jpeg");
   background-position: center;
 
   padding-left: 2%;
 }
-#involved h1 {
+#team h1 {
   font-size: 2.5rem;
+}
+
+.threeWay {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.personContainer {
+  width: 30%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.personContainer img {
+  max-width: 30%;
+}
+
+@media (max-width: 900px) {
+  .threeWay {
+    flex-direction: column;
+  }
+  .personContainer {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+
+    margin-bottom: 1vh;
+  }
+
+  .personContainer img {
+    max-width: 10%;
+  }
 }
 
 #contact {
   width: 50%;
+  height: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("./assets/floor.png");
   background-position: center;
@@ -307,8 +378,12 @@ hr {
   font-size: 2.5rem;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 900px) {
   #involved {
+    width: 100%;
+  }
+
+  #team {
     width: 100%;
   }
 
@@ -329,7 +404,7 @@ hr {
   }
 }
 
-@keyframes fadeInBottom {
+@keyframes fadeInBottomLess {
   from {
     opacity: 0;
     transform: translateY(10%);
@@ -339,10 +414,43 @@ hr {
   }
 }
 
-@media (max-width: 650px) {
+@keyframes fadeInBottom {
+  from {
+    opacity: 1;
+    transform: translateY(5vh);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.insideInfo {
+  margin-right: 100px;
+}
+
+#wideVideo {
+  display: none;
+}
+
+@media (max-width: 900px) {
   .twoWay {
     flex-direction: column; /* Stack divs vertically */
     text-align: center; /* Center the content */
+  }
+
+  .insideInfo {
+    margin: 0;
+    margin-bottom: 50px;
+  }
+
+  #wideVideo {
+    display: block;
+    width: 80%;
+    height: 300px;
+  }
+
+  #tallVideo {
+    display: none;
   }
 }
 
@@ -357,4 +465,76 @@ footer {
   animation: 6s gradientShift linear infinite; */
 
   padding: 1%;
+}
+
+/* Random stuff */
+#twoWayAddInfo {
+  font-size: 1.4rem;
+}
+#spacers {
+  padding-top: 1vh;
+}
+
+#sponsor {
+  width: 50%;
+
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./assets/bull.jpeg");
+  background-position: center;
+
+  padding-left: 2vw;
+}
+
+#actionItems {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  padding-bottom: 2vh;
+}
+
+#actionItems h1 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.miniItem {
+  color: white;
+
+  width: 30%;
+
+  padding: 5px;
+
+  background-color: #111111;
+}
+
+.threeWayTop {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.miniItem h2 {
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .threeWayTop {
+    flex-direction: column;
+  }
+  .miniItem {
+    width: 100%;
+
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+
+    background-color: transparent;
+  }
+
+  .miniItem h2 {
+    text-align: left;
+  }
 }

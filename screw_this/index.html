@@ -10,7 +10,7 @@
     personal finance classes | Inspiring future business leaders throughout
     Pittsburgh"
     />
-    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico?v=2" />
 
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -18,7 +18,7 @@
     <div class="nav">
       <input type="checkbox" id="nav-check" />
       <div class="nav-header">
-        <div class="nav-title">The Teen Traders</div>
+        <a href="./" class="nav-title">The Teen Traders</a>
       </div>
       <div class="nav-btn">
         <label for="nav-check">
@@ -33,7 +33,7 @@
         <a href="#strategy">Our Strategy</a>
         <a href="#classes">Classes</a>
         <a href="#game">Stock Market Game</a>
-        <a href="#involved">Get Involved</a>
+        <a href="#team">Our Team</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -42,104 +42,186 @@
       <img
         src="./assets/logo.png"
         alt="Teen Traders Logo"
-        class="fadeInClass"
+        class="fadeInClassAnimationTitle"
       />
       <div class="leftMessage">
-        <h1 class="fadeInClass">
+        <h1 class="fadeInClassAnimationTitle">
           Creating the
           <span>Next Generation</span>
           of Successful Stock Market Investors
         </h1>
-        <p class="fadeInClass">
+        <p class="fadeInClassAnimationTitle">
           An investment organization dedicated to
-          <strong>teaching</strong> personal finance and stock skills.
+          <strong>teaching</strong> personal finance and stock market investing.
         </p>
       </div>
     </div>
 
-
-
     <div class="slider">
       <div class="slide-track">
         <div class="slide">
-          <img src="assets/colleges/cornell.png" alt=""/>
+          <img src="assets/colleges/cornell.png" alt="" />
         </div>
         <div class="slide">
-          <img src="assets/colleges/duke.png" alt=""/>
+          <img src="assets/colleges/duke.png" alt="" />
         </div>
         <div class="slide">
-          <img src="assets/colleges/harvard.png" alt=""/>
+          <img src="assets/colleges/harvard.png" alt="" />
         </div>
         <div class="slide">
-          <img src="assets/colleges/mich.webp" alt=""/>
+          <img src="assets/colleges/mich.webp" alt="" />
         </div>
         <div class="slide">
-          <img src="assets/colleges/NYU.png" alt=""/>
+          <img src="assets/colleges/NYU.png" alt="" />
         </div>
         <div class="slide">
-          <img src="assets/colleges/upenn.png" alt=""/>
+          <img src="assets/colleges/upenn.png" alt="" />
         </div>
       </div>
     </div>
 
-    <hr />
-
-    <div id="about" class="container">
-      <h1>About Us</h1>
-
-      Founded in Pittsburgh, the Teen Traders is a nonprofit dedicated to
-      spreading knowledge about business and personal finance across Pittsburgh.
-      Our mission is to help decrease the gap between the new and old traders,
-      lowering income disparity while increasing chance of success. <br />
-      <div style="height: 2vh"></div>
-      <span style="font-size: 1.7vw"
-        >Only <span style="color: red">35%</span> of Gen-Z is currently invested
-        in Stocks.
-      </span>
-      <div></div>
-      <br />
-      As we looked around, we realized that there was a stark lack of financial
-      knowledge and a large difference in knowledge between young, new investors
-      and tried and tested traders. With numbers like this, most young adults
-      are going into the financial world not knowing about Roth IRAs, 401(k)s,
-      or basic investment strategy.<br />
-      <div style="height: 2vh"></div>
-      <span style="font-size: 2vw">That's where we come in.</span>
-      <div></div>
-      <br />
-      By teaching personal finance and investment management, not only do we set
-      people up with the skills necessary to get ahead, we let them test it in
-      real-world scenarios.
-
-      <h2>We Do This in Two Ways</h1>
+    <div id="about" class="container fadeInBottom">
+      <div class="twoWay">
+        <div class="insideInfo">
+          <h1>About Us</h1>
+          Teen Traders is an organization dedicated to teaching teenagers and
+          high-school students about stock market investing, personal finance,
+          and financial literacy. Through competition-based learning, students
+          are able to grasp fundamental investing concepts and learn how to grow
+          their portfolios using a variety of strategies. Throughout the
+          process, there will be videos and meetings to help students navigate
+          the world of finance. Every resource is completely free to use for
+          students and is designed to prepare them for financial success in
+          their lives.
+          <br />
+          <br />
+          Starting to invest at a young age is one of the most beneficial things
+          you can do for your financial health. Using the power of compound
+          interest coupled with safe investing strategies, you can grow your net
+          worth at a stable and impressive rate. This concept is demonstrated on
+          our YouTube channel, The Teenage Investor, through this short video.
+          <br />
+          As we looked around, we realized that there was a stark lack of
+          financial knowledge and a large difference in knowledge between young,
+          new investors and tried and tested traders. With numbers like this,
+          most young adults are going into the financial world not knowing about
+          Roth IRAs, 401(k)s, or basic investment strategy.<br />
+          <div style="height: 2vh"></div>
+          <br />
+          By teaching personal finance and investment management, not only do we
+          set people up with the skills necessary to get ahead, we let them test
+          it in real-world scenarios.
+        </div>
+        <iframe
+          id="tallVideo"
+          width="315"
+          height="560"
+          src="https://www.youtube.com/embed/1VMsihJTnyk?si=u818YRK26-fA6SD6?autoplay=1&mute=1&controls=0"
+          title="YouTube video player"
+          frameborder="0"
+        ></iframe>
+        <iframe
+          id="wideVideo"
+          src="https://www.youtube.com/embed/ikkj_j7Jdpc?si=n7umOf0RQtgcQXvH?autoplay=1&mute=1&controls=0"
+          title="YouTube video player"
+          frameborder="0"
+        ></iframe>
+      </div>
     </div>
 
     <div id="strategy" class="container">
       <h1>Our Strategy</h1>
       <div class="twoWay">
-        <div class="smallBox" id="classes">
-          <h2>Classes</h2>  
-          We host free online classes *insert info here*
+        <div class="smallBox" id="classes" class="fadeInBottom">
+          <h2>Videos</h2>
+          On The Teenage Investor YouTube channel, we create bite-sized videos
+          that cover everything from the basics to advanced investing topics.
+          Our content provides valuable insights, tips, and tricks for newbies
+          and those with some experience under their belt. Our mission goes
+          beyond just sharing information – we want to light that investing
+          spark in young minds. Through interactive competitions and engaging
+          content, we're nurturing a new generation of confident and
+          knowledgeable investors. So, come and join us at Teen Traders and The
+          Teenage Investor YouTube channel. Let's embark on this exciting
+          journey of financial exploration and wealth-building together. Get
+          ready to take charge of your financial future with the support of an
+          inspiring community and educational resources designed for young
+          investors.
+          <div></div>
+        </div>
+        <div class="smallBox" id="game" class="fadeInBottom">
+          <h2>Stock Market Game</h2>
+          We’ve partnered with Investopedia to host the Teen Traders 2023 Fall
+          Investing Challenge. To enter the competition, head to
+          <a href="https://www.investopedia.com/simulator/" style="color: white"
+            >https://www.investopedia.com/simulator/</a
+          >
+          and create an account. After creating your account, head to the games
+          section and search for the Teen Traders Competition. After you have
+          joined, you are free to start making trades and growing your
+          portfolio. Enjoy!
+        </div>
+      </div>
+    </div>
+
+    <div id="actionItems">
+      <h1>How to Join</h1>
+      <div class="threeWayTop">
+        <div class="miniItem where">
+          <h2>Where</h2>
           <div>
-            
+            Visit the investopedia site above to check out our stock market
+            game.<br />
+            Visit our channel, The Teen Traders, on YouTube to start learning
+            today
           </div>
         </div>
-        <div class="smallBox" id="game">
-          <h2>Stock Market Game</h2>
-          Partnering with investepedia, we do stuff
+        <div class="miniItem when">
+          <h2>When</h2>
+          <div>Our stock market game is scheduled to run on __</div>
+        </div>
+        <div class="miniItem who">
+          <h2>Who</h2>
+          <div>
+            Although we're exclusive to high schoolers, anyone is welcome to
+            join! Our mission is to foster knowledge among everyone, no matter
+            they're demographic.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="team" class="fadeInClass">
+      <h1>Meet Our Team</h1>
+      <div class="threeWay">
+        <div class="personContainer">
+          <img src="./assets/founders/nilay.png" />
+          <h2>Nilay Mishra</h2>
+          <h3>CEO</h3>
+        </div>
+        <div class="personContainer">
+          <img src="./assets/founders/nilay.png" />
+          <h2>Tanay Mishra</h2>
+          <h3>COO</h3>
+        </div>
+        <div class="personContainer">
+          <img src="./assets/founders/nilay.png" />
+          <h2>Praneeth Otthi</h2>
+          <h3>CTO</h3>
         </div>
       </div>
     </div>
 
     <div class="twoWay largerContainer">
-      <div id="involved">
-        <h1>Get Involved</h1>
+      <div id="sponsor" class="fadeInClass">
+        <h1>Interested in Sponsoring?</h1>
       </div>
-      <div id="contact">
+      <div id="contact" class="fadeInClass">
         <h1>Contact Us</h1>
       </div>
     </div>
 
     <footer>© Teen Traders 2023</footer>
   </body>
+  <script src="./script.js"></script>
 </html>
