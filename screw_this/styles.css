@@ -368,7 +368,7 @@ hr {
 #contact {
   width: 50%;
   height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url("./assets/floor.png");
   background-position: center;
 
@@ -486,6 +486,10 @@ footer {
   padding-left: 2vw;
 }
 
+#sponsor h1 {
+  font-size: 2.5rem;
+}
+
 #actionItems {
   width: 100%;
   display: flex;
@@ -534,7 +538,37 @@ footer {
     background-color: transparent;
   }
 
+  #sponsor {
+    width: 100%;
+  }
+
   .miniItem h2 {
     text-align: left;
   }
+}
+
+#innerBoxOuter {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#innerBox {
+  width: 70%;
+  white-space: nowrap;
+  text-align: center;
+
+  padding: 5px;
+
+  margin-bottom: 2vh;
+
+  background-color: rgba(150, 150, 150, 0.3);
+}
+
+#innerBox:hover {
+  background-color: rgba(10, 10, 10, 0.3);
+  cursor: pointer;
 }
