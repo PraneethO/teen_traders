@@ -41,7 +41,6 @@ body {
   height: 50px;
   width: 100%;
   position: fixed;
-
   color: white;
 
   background-color: rgba(0, 0, 0, 0.3);
@@ -345,7 +344,7 @@ hr {
 }
 
 .personContainer img {
-  max-width: 30%;
+  max-width: 50%;
 }
 
 @media (max-width: 900px) {
@@ -361,7 +360,7 @@ hr {
   }
 
   .personContainer img {
-    max-width: 10%;
+    max-width: 20%;
   }
 }
 
@@ -430,6 +429,7 @@ hr {
 
 #wideVideo {
   display: none;
+
 }
 
 @media (max-width: 900px) {
@@ -440,7 +440,6 @@ hr {
 
   .insideInfo {
     margin: 0;
-    margin-bottom: 50px;
   }
 
   #wideVideo {
@@ -484,6 +483,7 @@ footer {
   background-position: center;
 
   padding-left: 2vw;
+  padding-bottom: 30px;
 }
 
 #sponsor h1 {
@@ -571,4 +571,52 @@ footer {
 #innerBox:hover {
   background-color: rgba(10, 10, 10, 0.3);
   cursor: pointer;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button2 {
+  font-family: "Raleway", sans-serif;
+  background-color: #222222;
+  border: 2px solid green;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2rem;
+  margin: auto;
+  margin-bottom: 25px;
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+
+  animation-name: buttonTest;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+.button2:hover {
+  background-color: #333333;
+  cursor: pointer;
+  /*
+  border-color: red;
+  transition: 0.5s ease-in-out;
+  */
+}
+
+@keyframes buttonTest {
+  0%   {border-color: red;}
+  50%   {border-color: green;}
+  100%   {border-color: red;}
 }
