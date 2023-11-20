@@ -66,6 +66,7 @@ body {
 .nav > .nav-links {
   display: inline;
   float: right;
+  padding-right: 1%;
   font-size: 18px;
 }
 
@@ -167,7 +168,7 @@ hr {
 
 .firstContainer h1 {
   font-size: 3vw;
-  padding-left: 3%;
+  padding-left: 1%;
 
   line-height: 70px;
 }
@@ -183,7 +184,7 @@ hr {
 
 .firstContainer p {
   font-size: 2vw;
-  padding-left: 3%;
+  padding-left: 1%;
 
   line-height: 50px;
 }
