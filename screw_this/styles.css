@@ -277,9 +277,14 @@ hr {
   background: transparent;
 }
 
+#strategy {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.93), rgba(0, 0, 0, 0.93)),
+  url("./assets/chart.jpg");
+  background-position: center;
+}
+
 #strategy .twoWay {
   justify-content: space-around;
-
   width: 100%;
 }
 .smallBox h2 {
